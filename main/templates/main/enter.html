@@ -1,0 +1,92 @@
+<form action="{% url 'main:enter' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+        {{ form.name }}
+    </div>
+    <div>
+        <label for="{{ form.brand.id_for_label }}">Brand:</label>
+        {{ form.brand }}
+    </div>
+    <div>
+        <label for="{{ form.seller.id_for_label }}">Seller:</label>
+        {{ form.seller }}
+    </div>
+    <div>
+        <label for="{{ form.price.id_for_label }}">Price:</label>
+        {{ form.price }}<span> ($)</span>
+    </div>
+    <div>
+        <label for="{{ form.quantity.id_for_label }}">Quantity:</label>
+        {{ form.quantity }}
+    </div>
+
+
+    <div>
+        <label for="{{ form.servings_per_cont.id_for_label }}">Servings per container:</label>
+        {{ form.servings_per_cont }}
+    </div>
+    <div>
+        <label for="{{ form.serving_size.id_for_label }}">Serving Size:</label>
+        {{ form.serving_size }}<span> (qty)</span>
+    </div>
+    <div>
+        <label for="{{ form.mass.id_for_label }}">Mass:</label>
+        {{ form.mass }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.flavor.id_for_label }}">Flavor:</label>
+        {{ form.flavor }}
+    </div>
+    <div>
+        <label for="{{ form.favorite.id_for_label }}">Favorite?</label>
+        {{ form.favorite }}
+    </div>
+
+
+    <div>
+        <label for="{{ form.calories.id_for_label }}">Calories:</label>
+        {{ form.calories }}
+    </div>
+    <div>
+        <label for="{{ form.total_fat.id_for_label }}">Total Fat:</label>
+        {{ form.total_fat }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.sat_fat.id_for_label }}">Saturated Fat:</label>
+        {{ form.sat_fat }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.trans_fat.id_for_label }}">Trans. Fat:</label>
+        {{ form.trans_fat }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.cholesterol.id_for_label }}">Cholesterol:</label>
+        {{ form.cholesterol }}<span> (mg)</span>
+    </div>
+    <div>
+        <label for="{{ form.sodium.id_for_label }}">Sodium:</label>
+        {{ form.sodium }}<span> (mg)</span>
+    </div>
+    <div>
+        <label for="{{ form.carbs.id_for_label }}">Total Carbohydrate:</label>
+        {{ form.carbs }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.fiber.id_for_label }}">Dietary Fiber:</label>
+        {{ form.fiber }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.total_sugar.id_for_label }}">Total Sugars:</label>
+        {{ form.total_sugar }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.added_sugar.id_for_label }}">Added Sugars:</label>
+        {{ form.added_sugar }}<span> (g)</span>
+    </div>
+    <div>
+        <label for="{{ form.protein.id_for_label }}">Protein:</label>
+        {{ form.protein }}<span> (g)</span>
+    </div>
+    <button type="submit">Submit</button>
+</form>

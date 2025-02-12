@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>{{fooditem.brand}} {{ fooditem.name }}</h1>
+
+{% for item in list_items %}
+    <p>{{ item }}</p>
+{% endfor %}
+
+<p>Back to <a href="/main">Main</a></p>
+
+</body>
+</html>

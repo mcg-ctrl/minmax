@@ -1,0 +1,10 @@
+<p>Items with the lowest price:</p>
+{% if lowest_price_list %}
+    <ul>
+    {% for fooditem in lowest_price_list %}
+        <li><a href="/{{ fooditem.id }}/details">{{fooditem.brand}} {{ fooditem.name }}  -  ${{fooditem.price}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No food items are available.</p>
+{% endif %}
