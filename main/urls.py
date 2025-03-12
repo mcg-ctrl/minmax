@@ -25,12 +25,18 @@ urlpatterns = [
     # Form for entering a new food item, e.g. /enter/
     path("enter/", views.enter, name="enter"),
 
-    # Form for entering a new food item, e.g. /enter/
+    # Lists of noteworthy rankings, e.g. /list/
     path("list/", views.list, name="list"),
 
-    # Form for entering a new food item, e.g. /enter/
+    # List all food item in listview form, e.g. /listview/
     path("listview/", FoodItemListView.as_view()),
 
-    # List all food items
-    path("table/", views.table, name="table")
+    # List all food items in table form, e.g. /table/
+    path("table/", views.table, name="table"),
+
+    # The MinMax optimization page, e.g. /minmax/
+    path("minmax/", views.minmax_page, name="dropdown_form"),
+
+    # List the previously generated MinMax optimization results, e.g. /myminmax/
+    path("myminmax/", views.myminmax, name="myminmax"),
 ]

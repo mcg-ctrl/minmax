@@ -1,0 +1,11 @@
+<p>Place holder for my minmax list:</p>
+<p>Temporary: The list below is lowest five food items from the /lists/ page</p>
+{% if myminmax_list %}
+<ul>
+    {% for fooditem in myminmax_list %}
+    <li><a href="/{{ fooditem.id }}/details">{{fooditem.brand}} {{ fooditem.name }}  -  ${{fooditem.price}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No saved minmax lists are available.</p>
+{% endif %}
